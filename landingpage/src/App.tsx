@@ -31,7 +31,17 @@ const iconLinks = [
     label: 'GitHub',
     href: 'https://github.com/Travingu',
     image: "",
-  }
+  },
+  {
+    label: 'Email',
+    href: "mailto:travis2channel@gmail.com",
+    image: "",
+  },
+  { 
+    label: 'Resume',
+    href: "",
+    image: "",
+  },
 ]
 
 function App() {
