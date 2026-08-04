@@ -10,15 +10,28 @@ const links = [
     href: 'https://games.travingn.dev/',
   },
   {
-    label: 'Other Projects',
-    description: 'In-depth Projects',
+    label: 'Projects',
+    description: 'More projects including professional works',
     href: 'https://projects.travingn.dev/',
   },
   {
-    label: 'Contact',
-    description: 'Get in touch',
-    href: 'https://contact.travingn.dev/',
+    label: 'Blog',
+    description: 'What is on my mind?',
+    href: 'https://blog.travingn.dev/',
   },
+]
+
+const iconLinks = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/trav1snguyen/',
+    image: "",
+  },
+  { 
+    label: 'GitHub',
+    href: 'https://github.com/Travingu',
+    image: "",
+  }
 ]
 
 function App() {
@@ -28,7 +41,7 @@ function App() {
         
       </header>
 
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center px-6 pb-20 text-center sm:px-10">
+      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center px-6 pb-20 text-center sm:px-10 ">
         <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
           Travis Nguyen
         </h1>
@@ -61,6 +74,20 @@ function App() {
           ))}
         </nav>
       </main>
+      <footer className="bg-black text-white px-6 py-20 sm:px-10 sm:py-40">
+          <h1 className="text-md font-bold flex flex-col">Stay Connected</h1>
+          {iconLinks.map((link) => (
+            <a 
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="">
+            <img src={link.image} alt={link.label}>
+            </img>
+            </a>
+          ))}
+      </footer>
     </div>
   )
 }
