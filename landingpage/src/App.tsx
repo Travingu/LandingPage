@@ -10,9 +10,9 @@ const links = [
     href: 'https://games.travingn.dev/',
   },
   {
-    label: 'External Projects',
-    description: 'Projects hosted elsewhere',
-    href: 'https://external-projects.travingn.dev/',
+    label: 'Other Projects',
+    description: 'In-depth Projects',
+    href: 'https://projects.travingn.dev/',
   },
   {
     label: 'Contact',
