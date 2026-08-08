@@ -10,37 +10,14 @@ const links = [
     href: 'https://games.travingn.dev/',
   },
   {
-    label: 'Projects',
-    description: 'More projects including professional works',
-    href: 'https://projects.travingn.dev/',
+    label: 'External Projects',
+    description: 'Projects hosted elsewhere',
+    href: 'https://external-projects.travingn.dev/',
   },
   {
-    label: 'Blog',
-    description: 'What is on my mind?',
-    href: 'https://blog.travingn.dev/',
-  },
-]
-
-const iconLinks = [
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/trav1snguyen/',
-    image: "",
-  },
-  { 
-    label: 'GitHub',
-    href: 'https://github.com/Travingu',
-    image: "",
-  },
-  {
-    label: 'Email',
-    href: "mailto:travis2channel@gmail.com",
-    image: "",
-  },
-  { 
-    label: 'Resume',
-    href: "",
-    image: "",
+    label: 'Contact',
+    description: 'Get in touch',
+    href: 'https://contact.travingn.dev/',
   },
 ]
 
@@ -92,21 +69,26 @@ function App() {
         </span>
       </header>
 
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center px-6 pb-20 text-center sm:px-10">
-        <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-          Travis Nguyen
-        </h1>
-        <p className="mt-4 text-lg font-semibold text-accent sm:text-xl">
-          Electrical and Computer Engineering
-        </p>
-        <p className="mt-4 max-w-md text-ink-muted">
-          Pick a destination below to see my work, play something I built, or
-          get in touch.
-        </p>
+      <main className="flex-1">
+        <section className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-10 px-6 pb-16 sm:flex-row sm:justify-between sm:px-10">
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
+            <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+              Travis Nguyen
+            </h1>
+            <p className="mt-4 text-lg font-semibold text-accent sm:text-xl">
+              Electrical and Computer Engineering
+            </p>
+            <p className="mt-4 max-w-md text-ink-muted">
+              Pick a destination below to see my work, play something I built,
+              or get in touch.
+            </p>
+          </div>
+          <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-accent-light text-3xl font-bold text-accent sm:h-48 sm:w-48">
+            TN
+          </div>
+        </section>
 
-        <div className="my-10 h-px w-full max-w-md bg-hairline" />
-
-        <nav className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2">
+        <nav className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-5 px-6 sm:grid-cols-2 sm:px-10 lg:grid-cols-4">
           {links.map((link) => (
             <a
               key={link.label}
@@ -124,7 +106,44 @@ function App() {
             </a>
           ))}
         </nav>
+
+        <div className="mx-auto my-16 h-px w-full max-w-5xl bg-hairline" />
+
+        <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 px-6 pb-20 sm:flex-row sm:px-10">
+          <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-accent-light text-3xl font-bold text-accent sm:h-48 sm:w-48">
+            TN
+          </div>
+          <div className="text-center sm:text-left">
+            <h2 className="text-2xl font-bold text-ink">About Me</h2>
+            <p className="mt-4 max-w-md text-ink-muted">
+              A short bio goes here — background, interests, and what drives
+              the work above. Swap this placeholder out whenever you're ready.
+            </p>
+          </div>
+        </section>
       </main>
+
+      <footer className="bg-neutral-950 px-6 py-10 sm:px-10">
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6">
+          <div className="flex items-center gap-5">
+            {socials.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={social.label}
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors duration-200 hover:bg-white/20"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+          <p className="text-sm text-white/50">
+            © {new Date().getFullYear()} Travis Nguyen
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
