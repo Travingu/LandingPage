@@ -93,7 +93,7 @@ function App() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
+              target="_self"
               rel="noreferrer"
               className="flex flex-col gap-1.5 rounded-2xl border-2 border-transparent bg-accent-light p-6 text-left transition-colors duration-200 hover:border-accent hover:shadow-sm"
             >
