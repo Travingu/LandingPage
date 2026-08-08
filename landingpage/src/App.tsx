@@ -10,9 +10,9 @@ const links = [
     href: 'https://games.travingn.dev/',
   },
   {
-    label: 'External Projects',
-    description: 'Projects hosted elsewhere',
-    href: 'https://external-projects.travingn.dev/',
+    label: 'Projects',
+    description: 'Projects of mine',
+    href: 'https://projects.travingn.dev/',
   },
   {
     label: 'Contact',
@@ -139,9 +139,6 @@ function App() {
               </a>
             ))}
           </div>
-          <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} Travis Nguyen
-          </p>
         </div>
       </footer>
     </div>
