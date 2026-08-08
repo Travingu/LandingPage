@@ -15,9 +15,9 @@ const links = [
     href: 'https://projects.travingn.dev/',
   },
   {
-    label: 'Contact',
-    description: 'Get in touch',
-    href: 'https://contact.travingn.dev/',
+    label: 'Blog',
+    description: 'Random thoughts',
+    href: 'https://blog.travingn.dev/',
   },
 ]
 
