@@ -83,9 +83,11 @@ function App() {
               or get in touch.
             </p>
           </div>
-          <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-accent-light text-3xl font-bold text-accent sm:h-48 sm:w-48">
-            TN
-          </div>
+          <img
+            src="/portrait.jpg"
+            alt="Travis Nguyen"
+            className="h-40 w-40 shrink-0 rounded-full object-cover object-[50%_25%] sm:h-48 sm:w-48"
+          />
         </section>
 
         <nav className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-5 px-6 sm:grid-cols-2 sm:px-10 lg:grid-cols-4">
@@ -110,14 +112,17 @@ function App() {
         <div className="mx-auto my-16 h-px w-full max-w-5xl bg-hairline" />
 
         <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-10 px-6 pb-20 sm:flex-row sm:px-10">
-          <div className="flex h-40 w-40 shrink-0 items-center justify-center rounded-full bg-accent-light text-3xl font-bold text-accent sm:h-48 sm:w-48">
-            TN
-          </div>
+          <img
+            src="/about.jpg"
+            alt="Travis Nguyen outdoors in Sedona, Arizona"
+            className="h-40 w-40 shrink-0 rounded-full object-cover object-[25%_50%] sm:h-48 sm:w-48"
+          />
           <div className="text-center sm:text-left">
             <h2 className="text-2xl font-bold text-ink">About Me</h2>
             <p className="mt-4 max-w-md text-ink-muted">
-              A short bio goes here — background, interests, and what drives
-              the work above. Swap this placeholder out whenever you're ready.
+              I'm an Electrical and Computer Engineering student at the
+              University of Washington, focused on embedded systems and
+              digital design. Outside of that, I play piano and tennis.
             </p>
           </div>
         </section>
