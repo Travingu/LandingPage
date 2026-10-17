@@ -40,7 +40,7 @@ Rules that follow from that:
 - `Hero`, `About`, `Skills`, `Destinations`, `SocialLinks`, `TopBar`, `Footer` are plain presentational components.
 - Résumé: `/resume.pdf` is **not in git** (the repo is public). Locally it's `public/resume.pdf` (gitignored); on Amplify a `200 (Rewrite)` rule serves it from S3. To update it, upload a new file to S3; no commit needed.
 - Link preview: `public/og-image.png` (1200×630) is a headless-Chrome screenshot of `og.html` / `src/og.tsx`, the hero over the real sky on a fixed October night. The command to regenerate it is in `og.html`. Regenerate it when the name or summary changes.
-- Photos: use the resized, EXIF-stripped `public/about-1280.jpg`, never the original iPhone files. `portrait.jpg` and `about.jpg` are unused originals.
+- Photos: use the resized, EXIF-stripped `public/about-1280.jpg`, never the original iPhone files. The originals (`about.jpg`, `portrait.jpg`) live in `originals/`, which is gitignored, so they're kept locally but never deployed (removed from the site 2026-10-17).
 
 ## Open items
 
