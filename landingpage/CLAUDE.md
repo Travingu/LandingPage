@@ -34,7 +34,7 @@ Rules that follow from that:
   - To pin the sky to a meaningful date instead of "now", pass a fixed `Date` instead of `useNow()` in `App.tsx`.
 - `src/data/highlights.ts`: Highlights content. Facts are copied from the portfolio site's data (`Website/website/src/data`), so keep the two in sync and don't add claims that aren't there.
 - `src/data/skills.ts`: Skills content, from the same portfolio data plus TypeScript (this site). Every skill names the project or job it was used in; don't add one without that.
-- The Portfolio and Blog sites still exist but are deliberately **not linked** from this page (owner's call, 2026-10-16), since Highlights and Skills now cover the portfolio's content.
+- The Portfolio and Blog sites were taken offline on 2026-10-16 (owner's call), since Highlights and Skills now cover the portfolio's content. Don't link them.
 - `src/components/Reveal.tsx`: sections fade up once as they enter the viewport (IntersectionObserver plus a CSS transition), also off under reduced motion.
 - `src/data/site.ts`: destinations and socials. **Edit links here only.** The top bar nav and the cards both read from it.
 - `Hero`, `About`, `Skills`, `Destinations`, `SocialLinks`, `TopBar`, `Footer` are plain presentational components.
