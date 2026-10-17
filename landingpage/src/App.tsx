@@ -27,7 +27,7 @@ function App() {
         <Hero />
         <Reveal className="pb-16 sm:pb-24">
           <div id="about" className="scroll-mt-24">
-            <About className="max-w-2xl" />
+            <About />
           </div>
         </Reveal>
         <Reveal className="pb-16 sm:pb-24">

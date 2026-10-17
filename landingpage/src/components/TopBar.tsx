@@ -4,8 +4,8 @@ import { destinations } from '../data/site'
 /** Monogram on the left, `center` (the sky timeline) in the middle, site nav on the right. */
 export default function TopBar({ center }: { center: ReactNode }) {
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-30 px-4 pt-4 sm:px-8 sm:pt-6">
-      <div className="mx-auto grid max-w-5xl grid-cols-[auto_1fr] items-center gap-x-4 gap-y-2 md:grid-cols-[1fr_auto_1fr]">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-30 pt-4 sm:pt-6">
+      <div className="mx-auto grid max-w-5xl grid-cols-[auto_1fr] px-4 sm:px-8 items-center gap-x-4 gap-y-2 md:grid-cols-[1fr_auto_1fr]">
       <a
         href="#top"
         onClick={(e) => {

@@ -47,7 +47,7 @@ export default function Highlights() {
         </div>
       </article>
 
-      <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {highlights.map((item) => (
           <li key={item.title}>
             <article className="flex h-full flex-col gap-4 rounded-md bg-paper p-6 shadow-card">

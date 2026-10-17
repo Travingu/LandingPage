@@ -24,3 +24,13 @@ export const socials = [
 ] as const
 
 export type SocialLabel = (typeof socials)[number]['label']
+
+export const resumeHref = '/FullResume.pdf'
+
+/** The "Now" panel beside the About bio. Facts come from the résumé. */
+export const now = [
+  { label: 'Studying', value: 'ECE, University of Washington · Class of 2028' },
+  { label: 'Building', value: 'Husky Micromouse, as cofounder and VP' },
+  { label: 'Working', value: 'IT Systems Student Assistant, UW Libraries' },
+  { label: 'Based in', value: 'Seattle, Washington' },
+]

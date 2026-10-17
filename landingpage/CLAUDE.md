@@ -1,6 +1,6 @@
 # Landing Page: Night Sky
 
-`travingn.dev` is a single, normally scrolling page (native scrollbar: no scroll-jacking, pinning or snapping) over a fixed twilight sky. **The sky is real:** the stars and constellation lines are the actual sky over Seattle at the moment of the visit, looking south. A wordless, looping timeline in the center of the top bar (`SkyTimeline.tsx`) turns the sky to other hours. Sections in order: hero (name, summary) → About (photo, bio, socials) → Highlights (one featured item plus three cards) → Skills (one card, three columns, each skill with where it was used) → "Elsewhere on travingn.dev" (large serif rows set straight on the sky, linking to Projects and Games; the only section not on paper, on purpose) → footer. **This page defines the theme the other sites are being moved to.** Treat its tokens as the source of truth.
+`travingn.dev` is a single, normally scrolling page (native scrollbar: no scroll-jacking, pinning or snapping) over a fixed twilight sky. **The sky is real:** the stars and constellation lines are the actual sky over Seattle at the moment of the visit, looking south. A wordless, looping timeline in the center of the top bar (`SkyTimeline.tsx`) turns the sky to other hours. Sections in order: hero (name, summary) → About (photo, bio and socials, plus a "Now" panel with the résumé button) → Highlights (one featured item plus a 2×2 grid of cards) → Skills (one card, three columns, each skill with where it was used) → "Elsewhere on travingn.dev" (large serif rows set straight on the sky, linking to Projects and Games; the only section not on paper, on purpose) → footer. **This page defines the theme the other sites are being moved to.** Treat its tokens as the source of truth.
 
 ## History (why it's simple)
 
@@ -32,17 +32,17 @@ Rules that follow from that:
   - `src/components/NightSky.tsx` is a fixed `-z-10` backdrop: the gradient, four static `blur-3xl` haze banks, then one **static SVG** with the constellation lines, faint stars and labels. Only stars brighter than magnitude 2 (~50) are HTML spans that twinkle (`.star` / `@keyframes twinkle` in `index.css`), so the animation stays compositor-only. Labels that would land behind the hero text are dropped.
   - `src/components/SkyTimeline.tsx`: a draggable strip of hour ticks (major every 6 h, ember dot = now) under a fixed center line, with no visible text by design. It loops: the offset wraps within ±12 h and the strip repeats every 24 h, so the jump is invisible. Releasing within 10 minutes of now, double-clicking, or Home returns to now; arrow keys step 10 minutes; it's a `role="slider"` with the Seattle time as `aria-valuetext`. The strip moves by `transform` only. The offset lives in `App.tsx`; the sky reads a `useDeferredValue` copy so dragging stays responsive. This is the one place the sky redraws in response to input, and it's driven by the drag, never by scroll. In `TopBar` it sits between monogram and nav from `md` up, and on a second centered row below that.
   - To pin the sky to a meaningful date instead of "now", pass a fixed `Date` instead of `useNow()` in `App.tsx`.
-- `src/data/highlights.ts`: Highlights content. Facts are copied from the portfolio site's data (`Website/website/src/data`), so keep the two in sync and don't add claims that aren't there.
-- `src/data/skills.ts`: Skills content, from the same portfolio data plus TypeScript (this site). Every skill names the project or job it was used in; don't add one without that.
+- `src/data/highlights.ts`: Highlights content. Facts come from the résumé (`public/FullResume.pdf`), so keep the two in sync and don't add claims that aren't there.
+- `src/data/skills.ts`: Skills content, from the same résumé plus this site's own stack. Every skill names the project or job it was used in; don't add one without that.
 - The Portfolio and Blog sites were taken offline on 2026-10-16 (owner's call), since Highlights and Skills now cover the portfolio's content. Don't link them.
 - `src/components/Reveal.tsx`: sections fade up once as they enter the viewport (IntersectionObserver plus a CSS transition), also off under reduced motion.
-- `src/data/site.ts`: destinations and socials. **Edit links here only.** The top bar nav and the cards both read from it.
+- `src/data/site.ts`: destinations, socials, the résumé path and the About card's "Now" facts (taken from the résumé). **Edit links here only.** The top bar nav and the cards both read from it.
 - `Hero`, `About`, `Skills`, `Destinations`, `SocialLinks`, `TopBar`, `Footer` are plain presentational components.
 - Photos: use the resized, EXIF-stripped `public/about-1280.jpg`, never the original iPhone files. `portrait.jpg` and `about.jpg` are unused originals.
 
 ## Open items
 
-- No résumé link yet (recruiters look for one first).
+- The résumé (`public/FullResume.pdf`, linked from the About card's Now panel) includes a phone number; consider a web copy without it.
 - The OG/link-preview image (`public/og-image.png`) still shows the old pre-retheme page.
 - The Games and Projects sites the cards link to are mostly "Coming soon", and the blog has no posts.
 
