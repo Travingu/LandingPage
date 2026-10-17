@@ -24,7 +24,6 @@ export const skillGroups: SkillGroup[] = [
       { name: 'PCB design in KiCad', usedIn: 'Line-Following Robot' },
       { name: 'Arduino and PID control', usedIn: 'Line-Following Robot' },
       { name: 'Failure analysis and test design', usedIn: 'Boeing' },
-      { name: 'X-ray and microscopy inspection', usedIn: 'Boeing' },
     ],
   },
   {
