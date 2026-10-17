@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Résumé: served in production from S3 via an Amplify rewrite, kept out of the public repo
+public/resume.pdf

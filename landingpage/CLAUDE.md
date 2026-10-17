@@ -38,11 +38,12 @@ Rules that follow from that:
 - `src/components/Reveal.tsx`: sections fade up once as they enter the viewport (IntersectionObserver plus a CSS transition), also off under reduced motion.
 - `src/data/site.ts`: destinations, socials, the résumé path and the About card's "Now" facts (taken from the résumé). **Edit links here only.** The top bar nav and the cards both read from it.
 - `Hero`, `About`, `Skills`, `Destinations`, `SocialLinks`, `TopBar`, `Footer` are plain presentational components.
+- Résumé: `/resume.pdf` is **not in git** (the repo is public). Locally it's `public/resume.pdf` (gitignored); on Amplify a `200 (Rewrite)` rule serves it from S3. To update it, upload a new file to S3; no commit needed.
 - Photos: use the resized, EXIF-stripped `public/about-1280.jpg`, never the original iPhone files. `portrait.jpg` and `about.jpg` are unused originals.
 
 ## Open items
 
-- The résumé (`public/FullResume.pdf`, linked from the About card's Now panel) includes a phone number; consider a web copy without it.
+- The résumé includes a phone number; consider a web copy without it.
 - The OG/link-preview image (`public/og-image.png`) still shows the old pre-retheme page.
 - The Games and Projects sites the cards link to are mostly "Coming soon", and the blog has no posts.
 

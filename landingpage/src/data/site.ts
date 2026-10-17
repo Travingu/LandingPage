@@ -25,7 +25,8 @@ export const socials = [
 
 export type SocialLabel = (typeof socials)[number]['label']
 
-export const resumeHref = '/FullResume.pdf'
+// Not in git: served locally from public/ (gitignored) and in production by an Amplify rewrite to S3.
+export const resumeHref = '/resume.pdf'
 
 /** The "Now" panel beside the About bio. Facts come from the résumé. */
 export const now = [
