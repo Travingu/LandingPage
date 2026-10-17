@@ -7,14 +7,10 @@ export interface Destination {
 export const destinations: Destination[] = [
   {
     label: 'Projects',
-    description: 'Tools I’ve shipped, starting with Trade Desk.',
+    description: 'Software and hardware I’ve built, from Nvevo to a line-following robot.',
     href: 'https://projects.travingn.dev/',
   },
-  {
-    label: 'Games',
-    description: 'Browser games I’ve designed and built.',
-    href: 'https://games.travingn.dev/',
-  },
+  // Games (https://games.travingn.dev/) is hidden for now; the site itself is still live.
 ]
 
 export const socials = [

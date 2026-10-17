@@ -1,6 +1,6 @@
 # Landing Page: Night Sky
 
-`travingn.dev` is a single, normally scrolling page (native scrollbar: no scroll-jacking, pinning or snapping) over a fixed twilight sky. **The sky is real:** the stars and constellation lines are the actual sky over Seattle at the moment of the visit, looking south. A wordless, looping timeline in the center of the top bar (`SkyTimeline.tsx`) turns the sky to other hours. Sections in order: hero (name, summary) → About (photo, bio and socials, plus a "Now" panel with the résumé button) → Highlights (one featured item plus a 2×2 grid of cards) → Skills (one card, three columns, each skill with where it was used) → "Elsewhere on travingn.dev" (large serif rows set straight on the sky, linking to Projects and Games; the only section not on paper, on purpose) → footer. **This page defines the theme the other sites are being moved to.** Treat its tokens as the source of truth.
+`travingn.dev` is a single, normally scrolling page (native scrollbar: no scroll-jacking, pinning or snapping) over a fixed twilight sky. **The sky is real:** the stars and constellation lines are the actual sky over Seattle at the moment of the visit, looking south. A wordless, looping timeline in the center of the top bar (`SkyTimeline.tsx`) turns the sky to other hours. Sections in order: hero (name, summary) → About (photo, bio and socials, plus a "Now" panel with the résumé button) → Highlights (one featured item plus a 2×2 grid of cards) → Skills (one card, three columns, each skill with where it was used) → "Elsewhere on travingn.dev" (large serif rows set straight on the sky, linking to Projects (Games is hidden for now, though games.travingn.dev is still live); the only section not on paper, on purpose) → footer. **This page defines the theme the other sites are being moved to.** Treat its tokens as the source of truth.
 
 ## History (why it's simple)
 
@@ -39,13 +39,13 @@ Rules that follow from that:
 - `src/data/site.ts`: destinations, socials, the résumé path and the About card's "Now" facts (taken from the résumé). **Edit links here only.** The top bar nav and the cards both read from it.
 - `Hero`, `About`, `Skills`, `Destinations`, `SocialLinks`, `TopBar`, `Footer` are plain presentational components.
 - Résumé: `/resume.pdf` is **not in git** (the repo is public). Locally it's `public/resume.pdf` (gitignored); on Amplify a `200 (Rewrite)` rule serves it from S3. To update it, upload a new file to S3; no commit needed.
+- Link preview: `public/og-image.png` (1200×630) is a headless-Chrome screenshot of `og.html` / `src/og.tsx`, the hero over the real sky on a fixed October night. The command to regenerate it is in `og.html`. Regenerate it when the name or summary changes.
 - Photos: use the resized, EXIF-stripped `public/about-1280.jpg`, never the original iPhone files. `portrait.jpg` and `about.jpg` are unused originals.
 
 ## Open items
 
 - The résumé includes a phone number; consider a web copy without it.
-- The OG/link-preview image (`public/og-image.png`) still shows the old pre-retheme page.
-- The Games and Projects sites the cards link to are mostly "Coming soon", and the blog has no posts.
+- The Games link is hidden for now (owner's call, 2026-10-17). To bring it back, restore its entry in `src/data/site.ts` and the word "games" in the `index.html` descriptions.
 
 ## To do
 

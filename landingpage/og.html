@@ -1,0 +1,22 @@
+<!doctype html>
+<!--
+  Source for public/og-image.png, the link-preview image. Served by the dev server only (the build
+  uses index.html). To regenerate, with `npx vite --port 5179` running, from this folder:
+  "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless --hide-scrollbars --window-size=1200,630 --virtual-time-budget=5000 --screenshot="public\og-image.png" http://localhost:5179/og.html
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&display=swap"
+    />
+    <title>travingn.dev link preview</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/og.tsx"></script>
+  </body>
+</html>

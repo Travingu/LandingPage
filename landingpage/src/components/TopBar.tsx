@@ -5,6 +5,9 @@ import { destinations } from '../data/site'
 export default function TopBar({ center }: { center: ReactNode }) {
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-30 pt-4 sm:pt-6">
+      {/* Fades content out as it scrolls under the bar. It starts at `night`, the color at the top
+          of the sky, so over the sky itself it only reads as a slightly darker band. */}
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 -bottom-8 -z-10 bg-linear-to-b from-night via-night/80 to-transparent" />
       <div className="mx-auto grid max-w-5xl grid-cols-[auto_1fr] px-4 sm:px-8 items-center gap-x-4 gap-y-2 md:grid-cols-[1fr_auto_1fr]">
       <a
         href="#top"
