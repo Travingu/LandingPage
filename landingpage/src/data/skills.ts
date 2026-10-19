@@ -33,7 +33,7 @@ export const skillGroups: SkillGroup[] = [
       { name: 'Firebase and Firestore', usedIn: 'GroupUp' },
       { name: 'PyQt6 and NumPy', usedIn: 'PyMiDio' },
       { name: 'Tailwind CSS', usedIn: 'travingn.dev' },
-      { name: 'AWS Amplify and Route 53', usedIn: 'travingn.dev' },
+      { name: 'AWS', usedIn: 'travingn.dev' },
     ],
   },
 ]
